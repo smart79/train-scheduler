@@ -1,8 +1,9 @@
-.h1 {
-background: grey
+body {
+  background: seashell;
 }
-
-
+.h1 {
+  background: grey;
+}
 thead{
-    font-weight: bold;
+  font-weight: bold;
   }
