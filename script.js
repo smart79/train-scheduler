@@ -6,7 +6,7 @@ $(document).ready(function() {
     var destination = "";
     var time = "";
     var frequency = "";
-    var currentTime = moment(currentTime).format('hh:mm');
+    var currentTime = dayjs(currentTime).format('hh:mm');
     var firstTimeConverted;
     var clock;
     var date;
@@ -24,7 +24,7 @@ $(document).ready(function() {
     // display current time
     var updateClock = function() {
      clock = $('#current-time');
-     date = moment(new Date()).format('dddd, MMMM Do YYYY, h:mm:ss a');
+     date = dayjs().format('dddd, MMMM Do YYYY, h:mm:ss a');
      clock.html('<h3>' + date + '</h3>');
      // isolates seconds
      var indCol = date.indexOf(':');
@@ -44,7 +44,7 @@ $(document).ready(function() {
     // calculate time when next train arrives
     function showTrains() {
      //time difference = current time - time of first train
-     var timeDiff = moment().diff(firstTimeConverted, 'minutes');
+     var timeDiff = dayjs().diff(firstTimeConverted, 'minutes');
      console.log("DIFFERENCE IN TIME: " + timeDiff);
      //timeDiff % frequency = minutesAgo
      var minutesAgo = timeDiff % trainFreq;
@@ -53,10 +53,10 @@ $(document).ready(function() {
      minutesLeft = trainFreq - minutesAgo;
      console.log("MINUTES TILL TRAIN: " + minutesLeft);
      //currentTime + minutesLeft = time of next train
-     var nextTrain = moment().add(minutesLeft, "minutes");
+     var nextTrain = dayjs().add(minutesLeft, "minutes");
      console.log(nextTrain);
      //format new time
-     nextTrainTime = moment(nextTrain).format("hh:mm");
+     nextTrainTime = dayjs(nextTrain).format("hh:mm");
      console.log("ARRIVAL TIME: " + nextTrainTime);
    
      //appends train info to table
@@ -76,7 +76,7 @@ $(document).ready(function() {
      // updates values in table for each object key
      for (i = 0; i < trainNames.length; i++) {
        //ensures that time is in the past
-      firstTimeConverted = moment(trainTimes[i], "hh:mm").subtract(1, "years");
+      firstTimeConverted = daysjs(trainTimes[i], "hh:mm").subtract(1, "years");
       trainName = trainNames[i]
       trainDes = trainDests[i];
       trainFreq = trainFreqs[i];
@@ -92,6 +92,7 @@ $(document).ready(function() {
      destination = $("#destination-input").val().trim();
      time = $("#time-input").val().trim();
      frequency = $("#frequency-input").val().trim();
+     
      // code for the push
      // wont push unless user fills out all fields
      if(name != '' && destination != '' && time != '' && frequency != '') {
