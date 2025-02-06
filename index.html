@@ -88,17 +88,21 @@
   </div>
   <script>
     // Initialize Firebase
-    var config = {
-       apiKey: "AIzaSyBV0HkMMl4bxHHQwYbWPuXAWXJtTiXUx-Y",
-       authDomain: "train-scheduler-f4fda.firebaseapp.com",
-       projectId: "train-scheduler-f4fda",
-       storageBucket: "train-scheduler-f4fda.firebasestorage.app",
-       messagingSenderId: "671963297093",
-       appId: "1:671963297093:web:010b4fbf4148de55cafa2c",
-       measurementId: "G-EB2VXRQZLE"
+    var firebaseConfig = {
+      apiKey: "AIzaSyBV0HkMMl4bxHHQwYbWPuXAWXJtTiXUx-Y",
+      authDomain: "train-scheduler-f4fda.firebaseapp.com",
+      databaseURL: "https://train-scheduler-f4fda-default-rtdb.firebaseio.com",
+      projectId: "train-scheduler-f4fda",
+      storageBucket: "train-scheduler-f4fda.appspot.com",
+      messagingSenderId: "671963297093",
+      appId: "1:671963297093:web:010b4fbf4148de55cafa2c",
+      measurementId: "G-EB2VXRQZLE"
     };
-    firebase.initializeApp(firebaseConfig);
-    var database = firebase.database();
+     
+     // Initialize Firebase
+     firebase.initializeApp(firebaseConfig);
+     var database = firebase.database();
+     
   </script>
 
   <!-- jQuery -->
