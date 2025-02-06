@@ -1,3 +1,6 @@
+console.log("✅ script.js is connected and running!");
+
+
 $(document).ready(function() {
 
     // initial values
