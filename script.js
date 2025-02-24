@@ -1,7 +1,11 @@
 console.log("✅ script.js is connected and running!");
 
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+// Check if Firebase has already been initialized
+if (!firebase.apps.length) {
+  firebase.initializeApp(firebaseConfig);
+} else {
+  firebase.app(); // If already initialized, use that one
+}
 const auth = firebase.auth();
 const dataRef = firebase.database();
 
