@@ -11,8 +11,8 @@ body {
   background: url("../images/bgimage.jpg") no-repeat center center;
   background-size: cover;
   height: 250px; /* Adjust as needed */
-  color: rgb(249, 13, 9); /* Ensures text is readable */
-  text-shadow: 2px 2px 4px rgb(246, 242, 9);
+  color: rgb(249, 249, 9); /* Ensures text is readable */
+  text-shadow: 2px 2px 4px rgb(246, 9, 9);
   display: flex;
   align-items: center;
   justify-content: center;
