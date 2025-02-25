@@ -103,3 +103,95 @@ button {
 button:hover {
   background-color: #45a049;
 }
+/* 🌟 🔹 RESPONSIVE DESIGN */
+
+/* Tablet View (Medium Screens) */
+@media (max-width: 992px) {
+  .container {
+    padding: 10px;
+  }
+
+  .jumbotron {
+    height: 200px;
+  }
+
+  .back-btn {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+}
+
+/* Mobile View (Small Screens) */
+@media (max-width: 768px) {
+  .jumbotron {
+    height: 180px;
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  #current-time {
+    font-size: 14px;
+  }
+
+  .top-bar {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .back-btn {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+
+  table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+  }
+
+  .new-train-form {
+    width: 90%;
+    margin: 10px auto;
+    padding: 15px;
+  }
+
+  .panel-title {
+    font-size: 18px;
+  }
+}
+
+/* Extra Small Screens (Phones under 480px) */
+@media (max-width: 480px) {
+  .jumbotron {
+    height: 150px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  #current-time {
+    font-size: 12px;
+  }
+
+  .back-btn {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  input {
+    font-size: 14px;
+  }
+}
